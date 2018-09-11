@@ -18,7 +18,7 @@
 
 const totalScore = (pointsPerQuarter) => {
   let score = 0;
-  let fullGameScore = pointsPerQuarter.map((points) => {
+  pointsPerQuarter.map((points) => {
     score += points;
   });
   return score;
@@ -48,7 +48,7 @@ const getAveragePoints = (players) => {
   const averagePlayers = pointsArray.length;
   
   //update totalPlayerScores with all the points to calculate average
-  const totalPoints = pointsArray.map((playerPoints) => {
+  pointsArray.map((playerPoints) => {
     return totalPlayerScores += playerPoints.points;
   });
 
@@ -68,8 +68,9 @@ console.log('Scoring Average', averageScore);
 //   - Make use of `startingPlayers` and `averageScore` that were created in question 2
 
 const getHighestScorers = (players, threshold) => {
-  
-  console.log(Object.value(players).points);
+    const playersArray = Object.keys(players);
+    console.log(playersArray);
+
 };
 
 const highestScoringPlayers = getHighestScorers(startingPlayers, averageScore);
@@ -104,7 +105,33 @@ const timePlayed = [
 ]
 
 const addTimePlayedPerQuarter = (timePlayedArr) => {
-  // @TODO
+  const quarterTime = 12;
+  const newTimePlayed = timePlayedArr.map((player) => {
+    let time = player.time;
+
+    // test which quarter player made it to
+    if( time > 36) {
+      player['1st quarter'] = quarterTime;
+      player['2nd quarter'] = quarterTime;
+      player['3rd quarter'] = quarterTime;
+      player['4th quarter'] = time - 36;
+      return player;
+    } else if (time > 24) {
+      player['1st quarter'] = quarterTime;
+      player['2nd quarter'] = quarterTime;
+      player['3rd quarter'] = time - 24;
+      return player;
+    } else if (time > 12) {
+      player['1st quarter'] = quarterTime;
+      player['2nd quarter'] = time - 12;
+      return player;
+    } else if (time > 0) {
+      player['1st quarter'] = time;
+      return player;
+    }
+  });
+
+  return newTimePlayed;
 }
 
 const timePerQuarter = addTimePlayedPerQuarter(timePlayed);

@@ -95,3 +95,4 @@ const data = require('./data/queries.json');
  * Answer
  */
 
+console.log(data[0].annotations[0].type);
