@@ -17,11 +17,15 @@
 //     - 4th quarter - 21
 
 const totalScore = (pointsPerQuarter) => {
-  let score = 0;
+  // made variable for total score
+  let totalScore = 0;
+
+  //cycled over scores and cumulated them
   pointsPerQuarter.map((points) => {
-    score += points;
+    totalScore += points;
   });
-  return score;
+  
+  return totalScore;
 };
 
 const raptorsScore = totalScore([26, 21, 25, 21]);
@@ -68,9 +72,23 @@ console.log('Scoring Average', averageScore);
 //   - Make use of `startingPlayers` and `averageScore` that were created in question 2
 
 const getHighestScorers = (players, threshold) => {
-    const playersArray = Object.keys(players);
-    console.log(playersArray);
+    // convert object to an array to manipulate 
+    const playersArray = Object.entries(players);
+    
+    // filtered out the players based of scoring higher then average
+    const highScorers = playersArray.filter((player) => {
+        return player[1].points >= threshold;
+    });
 
+    //created a new empty object as to not mutate original data
+    const playerObject = {};    
+
+    // populate new object with wanted data
+    highScorers.map((player) => {
+        playerObject[player[0]] = player[1];
+    });
+
+    return playerObject;
 };
 
 const highestScoringPlayers = getHighestScorers(startingPlayers, averageScore);
@@ -107,9 +125,9 @@ const timePlayed = [
 const addTimePlayedPerQuarter = (timePlayedArr) => {
   const quarterTime = 12;
   const newTimePlayed = timePlayedArr.map((player) => {
-    let time = player.time;
+    const time = player.time;
 
-    // test which quarter player made it to
+    // test which quarter player made it to and populate object with required fields
     if( time > 36) {
       player['1st quarter'] = quarterTime;
       player['2nd quarter'] = quarterTime;
