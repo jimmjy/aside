@@ -13,10 +13,145 @@
 
 			Padding across the site: 30px; ( smaller padding will be 15px or 10px)
 		*/
+
+		body {
+			margin: 0 auto;
+			padding: 0;
+			box-sizing: border-box;
+			min-width: 960px;
+    		width: 90%;
+    		max-width: 1200px;
+			position: relative;
+		}
+		
+		/* right side of page styling */
+		.main-content {
+			display: block;
+			width: calc(100% - 250px);
+			position: relative;
+			top: 0;
+			right: 0;
+		}
+
+		.page-head {
+			background: #d81b60;
+		}
+
+		.nav-bar {
+			text-align: right;
+		}
+
+		.nav-items {
+			list-style: none;
+			margin: 0;
+			padding: 15px;
+		}
+
+		.nav-item {
+			display: inline-block;
+			margin: 0 15px;
+		}
+
+		.nav-item a {
+			text-decoration: none;
+			color: #fff;
+		}
+
+		/* left side styling */
+		.left-side {
+			display: block;
+			width: 250px;
+			position: relative;
+			top: 0;
+			left: 0;
+		}
+
+
 	</style>
 
 </head>
 <body>
-
+	<main class="main-content">
+		<header class="page-head">
+			<nav class="nav-bar">
+				<ul class="nav-items">
+					<li class="nav-item">
+						<a href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section class="content-body">
+			<div class="wrapper">
+				<div class="who-we-are">
+					<h1 class="we-are-header">Developer at Adeptmind</h1>
+					<p class="paragraph">
+						Adeptmind is an AI company innovating in e-commerce search using active learning and deep learning. Its co-founders recently came out of a quite successful sale of their previous company. This time around, they raised a little too much VC capital and are looking to grow a kick-ass silicon Valley stule team right here in downtown Toronto.
+					</p>
+					<p class="paragraph">
+						Our current engineering efforts focus on vertical expansion; building more tools and services. Current projects ranges from creating internal service to provide command line utilities as well large scall crawling and data processing.  If you are a hacker minded developer like us, you will find it at home.
+					</p>
+					<p class="paragraph">
+						Of course, life in a young startup can get hectic. But we spend just as much, if not more, effort to grow our engineers as well.  We actively hold technicial seminars, send our people to conferences and initiate manageable research project.  We believe a company cannot grow until the people can.
+					</p>
+					<h2 class="gallery-heading">Gallery</h2>
+					<div class="photo-gallery">
+						<div class="img">
+							<img src="images/image1.jpg" class="img1" alt="outdoor view">
+						</div>
+						<div class="img">
+								<img src="images/image2.jpg" class="img1" alt="outdoor view">
+						</div>
+						<div class="img">
+								<img src="images/image3.jpg" class="img1" alt="outdoor view">
+						</div>
+						<div class="img">
+								<img src="images/image4.jpg" class="img1" alt="outdoor view">
+						</div>
+						<div class="img">
+								<img src="images/image5.jpg" class="img1" alt="outdoor view">
+						</div>
+						<div class="img">
+								<img src="images/image6.jpg" class="img1" alt="outdoor view">
+						</div>
+					</div> <!-- end of photo gallery-->
+				</div>
+			</div> <!-- end of wrapper -->
+		</section>
+	</main>
+	<Sidebar class="left-side">
+		<div class="company-logo">
+			<img src="images/adeptmind-logo-white.svg" alt="Adeptmind Logo">
+		</div>
+		<div class="sidebar-body">
+			<div class="profile">
+				<img src="images/profile-image.png" alt="profile image of a man with glasses">
+			</div>
+		</div>
+	</Sidebar>
+	<footer class="page-footer">
+		<div class="copyright">
+			<p class="copy">&copy;2018</p>
+		</div>
+		<nav class="nav-bar">
+				<ul class="nav-items">
+					<li class="nav-item">
+						<a href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</nav>
+	</footer>
 </body>
 </html>
