@@ -25,8 +25,8 @@
 		}
 		
 		/* right side of page styling */
+		/* header section */
 		.main-content {
-			display: block;
 			width: calc(100% - 250px);
 			position: relative;
 			top: 0;
@@ -57,14 +57,28 @@
 			color: #fff;
 		}
 
-		/* left side styling */
-		.left-side {
-			display: block;
-			width: 250px;
-			position: relative;
-			top: 0;
-			left: 0;
+		/* main content body styling */
+
+		.content-body {
+			padding: 0 15px;
 		}
+
+		.photo-gallery {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 100% 100%;
+			grid-column-gap: 10px;
+			grid-row-gap: 10px;
+		}
+
+		.img1 {
+			display: block;
+			width: 100%;
+		}
+
+		
+
+
 
 
 	</style>
@@ -88,41 +102,39 @@
 			</nav>
 		</header>
 		<section class="content-body">
-			<div class="wrapper">
-				<div class="who-we-are">
-					<h1 class="we-are-header">Developer at Adeptmind</h1>
-					<p class="paragraph">
-						Adeptmind is an AI company innovating in e-commerce search using active learning and deep learning. Its co-founders recently came out of a quite successful sale of their previous company. This time around, they raised a little too much VC capital and are looking to grow a kick-ass silicon Valley stule team right here in downtown Toronto.
-					</p>
-					<p class="paragraph">
-						Our current engineering efforts focus on vertical expansion; building more tools and services. Current projects ranges from creating internal service to provide command line utilities as well large scall crawling and data processing.  If you are a hacker minded developer like us, you will find it at home.
-					</p>
-					<p class="paragraph">
-						Of course, life in a young startup can get hectic. But we spend just as much, if not more, effort to grow our engineers as well.  We actively hold technicial seminars, send our people to conferences and initiate manageable research project.  We believe a company cannot grow until the people can.
-					</p>
-					<h2 class="gallery-heading">Gallery</h2>
-					<div class="photo-gallery">
-						<div class="img">
-							<img src="images/image1.jpg" class="img1" alt="outdoor view">
-						</div>
-						<div class="img">
-								<img src="images/image2.jpg" class="img1" alt="outdoor view">
-						</div>
-						<div class="img">
-								<img src="images/image3.jpg" class="img1" alt="outdoor view">
-						</div>
-						<div class="img">
-								<img src="images/image4.jpg" class="img1" alt="outdoor view">
-						</div>
-						<div class="img">
-								<img src="images/image5.jpg" class="img1" alt="outdoor view">
-						</div>
-						<div class="img">
-								<img src="images/image6.jpg" class="img1" alt="outdoor view">
-						</div>
-					</div> <!-- end of photo gallery-->
-				</div>
-			</div> <!-- end of wrapper -->
+			<div class="who-we-are">
+				<h1 class="we-are-header">Developer at Adeptmind</h1>
+				<p class="paragraph">
+					Adeptmind is an AI company innovating in e-commerce search using active learning and deep learning. Its co-founders recently came out of a quite successful sale of their previous company. This time around, they raised a little too much VC capital and are looking to grow a kick-ass silicon Valley stule team right here in downtown Toronto.
+				</p>
+				<p class="paragraph">
+					Our current engineering efforts focus on vertical expansion; building more tools and services. Current projects ranges from creating internal service to provide command line utilities as well large scall crawling and data processing.  If you are a hacker minded developer like us, you will find it at home.
+				</p>
+				<p class="paragraph">
+					Of course, life in a young startup can get hectic. But we spend just as much, if not more, effort to grow our engineers as well.  We actively hold technicial seminars, send our people to conferences and initiate manageable research project.  We believe a company cannot grow until the people can.
+				</p>
+				<h2 class="gallery-heading">Gallery</h2>
+				<div class="photo-gallery">
+					<div class="img">
+						<img src="images/image1.jpg" class="img1" alt="outdoor view">
+					</div>
+					<div class="img">
+							<img src="images/image2.jpg" class="img1" alt="outdoor view">
+					</div>
+					<div class="img">
+							<img src="images/image3.jpg" class="img1" alt="outdoor view">
+					</div>
+					<div class="img">
+							<img src="images/image4.jpg" class="img1" alt="outdoor view">
+					</div>
+					<div class="img">
+							<img src="images/image5.jpg" class="img1" alt="outdoor view">
+					</div>
+					<div class="img">
+							<img src="images/image6.jpg" class="img1" alt="outdoor view">
+					</div>
+				</div> <!-- end of photo gallery-->
+			</div>
 		</section>
 	</main>
 	<Sidebar class="left-side">
