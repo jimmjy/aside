@@ -17,7 +17,7 @@
 			
 		}
 		html {
-			background: gray;
+			background: rgb(187, 182, 182);
 		}
 
 		body {
@@ -25,131 +25,76 @@
 			padding: 0;
 			box-sizing: border-box;
 			min-width: 960px;
-    		width: 90%;
     		max-width: 1200px;
 			position: relative;
-		}
-		
-		/* right side of page styling */
-		/* header section */
-		.main-content {
-			width: calc(100% - 250px);
-			position: absolute;
-			top: 0;
-			right: 0;
-			
+			font-size: 16px;
 			background: #fff;
 		}
+		
+		/* header styling */
 
 		.page-head {
+			width: 100%;
 			background: #d81b60;
+			display: flex;
+			justify-content: space-between;
+			position: relative;
 		}
 
-		.nav-bar {
-			text-align: right;
+		.company-logo {
+			width: calc(250px - 2rem);
+			position: relative;
+			background: #d81b60;
+			top: 2.1rem;
+		}
+
+		.company-logo img {
+			display: block;
+			width: 80%;
+			margin: 0 auto;
 		}
 
 		.nav-items {
 			list-style: none;
 			margin: 0;
-			padding: 15px;
+			padding: .2rem;
 		}
 
 		.nav-item {
 			display: inline-block;
-			margin: 0 15px;
+			padding: 1rem;
 		}
 
 		.nav-item a {
 			text-decoration: none;
 			color: #fff;
+			font-size: 1.1rem;
+			font-family: Arial, Helvetica, sans-serif;
 		}
-
-		/* main content body styling */
-
-		.content-body {
-			padding: 0 15px;
-		}
-
-		.photo-gallery {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			grid-template-rows: 100% 100%;
-			grid-column-gap: 10px;
-			grid-row-gap: 10px;
-			padding-bottom: 10px;
-		}
-
-		.img1 {
-			display: block;
-			width: 100%;
-		}
-
-		/* side bar styling */
-
-		.left-side {
-			display: block;
-			width: 250px;
-			position: relative;
-			top: 0;
-			left: 0;
-		}
-
-		.company-logo {
-			width: 100%;
-			background: #d81b60;
-			text-align: center;
-			padding: 30px 0;
-		}
-
-		.company-logo img {
-			width: 200px;
-			display: block;
-			margin: 0 auto;
-		}
-
-		.sidebar-body {
-			background: #fff;
-		}
-
-		/* footer styling */
-
-		.page-footer {
-			display: flex;
-			justify-content: space-between;
-			background: #444143;
-		}
-
-		.copy {
-			padding: 0 15px;
-			color: #fff;
-		}
-
-		
-
-
-
 
 	</style>
 
 </head>
 <body>
+	<header class="page-head">
+		<div class="company-logo">
+			<img src="images/adeptmind-logo-white.svg" alt="Adeptmind Logo">
+		</div>
+		<nav class="nav-bar">
+			<ul class="nav-items">
+				<li class="nav-item">
+					<a href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="#">About</a>
+				</li>
+				<li class="nav-item">
+					<a href="#">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
 	<main class="main-content">
-		<header class="page-head">
-			<nav class="nav-bar">
-				<ul class="nav-items">
-					<li class="nav-item">
-						<a href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a href="#">About</a>
-					</li>
-					<li class="nav-item">
-						<a href="#">Contact</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
 		<section class="content-body">
 			<div class="who-we-are">
 				<h1 class="we-are-header">Developer at Adeptmind</h1>
@@ -185,17 +130,14 @@
 				</div> <!-- end of photo gallery-->
 			</div>
 		</section>
-	</main>
-	<Sidebar class="left-side">
-		<div class="company-logo">
-			<img src="images/adeptmind-logo-white.svg" alt="Adeptmind Logo">
-		</div>
-		<div class="sidebar-body">
-			<div class="profile">
-				<img src="images/profile-image.png" alt="profile image of a man with glasses">
+		<Sidebar class="left-side">
+			<div class="sidebar-body">
+				<div class="profile">
+					<img src="images/profile-image.png" alt="profile image of a man with glasses">
+				</div>
 			</div>
-		</div>
-	</Sidebar>
+		</Sidebar>
+	</main>
 	<footer class="page-footer">
 		<div class="copyright">
 			<p class="copy">&copy;2018</p>
